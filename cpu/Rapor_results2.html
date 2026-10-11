@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>CPU Zamanlama Raporu (results2)</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #333; }
+        table { width: 80%; border-collapse: collapse; margin-top: 20px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ccc; padding: 12px; text-align: center; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>CPU Zamanlama Analizi (results2)</h1>
+    <p>Girdi dosyası: case2.csv | Round Robin quantum: 10
+       | Bağlam değiştirme süresi: 0.001</p>
+    <h2>Algoritma Karşılaştırması</h2>
+    <table>
+        <thead><tr><th>Algoritma</th><th>Ort. Bekleme Süresi</th>
+        <th>Ort. Tamamlanma Süresi</th><th>CPU Verimliliği</th></tr></thead>
+        <tbody>
+        <tr><td>FCFS</td><td>418.00</td><td>428.50</td><td>0.9999</td></tr>
+        <tr><td>SJF_NP</td><td>268.39</td><td>278.89</td><td>0.9999</td></tr>
+        <tr><td>SJF_P</td><td>267.86</td><td>278.36</td><td>0.9999</td></tr>
+        <tr><td>RR</td><td>511.18</td><td>521.68</td><td>0.9999</td></tr>
+        <tr><td>Priority_NP</td><td>409.63</td><td>420.13</td><td>0.9999</td></tr>
+        <tr><td>Priority_P</td><td>411.39</td><td>421.89</td><td>0.9999</td></tr>
+        </tbody>
+    </table>
+    <p>Not: Düşük bekleme ve tamamlanma süreleri, yüksek verimlilik daha iyi performansı gösterir.</p>
+    <h2>Yorum</h2>
+    <p>Ortalama bekleme süresine göre en iyi algoritma <b>SJF_P</b>
+       (267.86), en kötü algoritma <b>RR</b>
+       (511.18) olmuştur.</p>
+</body>
+</html>
